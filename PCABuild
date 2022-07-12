@@ -1,0 +1,14 @@
+#!/bin/bash
+
+g++ -c \
+/DothPlace/DothProject/PCA9685/PCA9685.cpp \
+-I/DothPlace/DothProject/DI2C/ \
+-std=c++11 
+
+ar rvs PCA9685Static.a \
+PCA9685.o 
+
+cp PCA9685Static.a /DothPlace/DothProject/Linked/PCA9685Static.a
+
+rm PCA9685Static.a
+rm PCA9685.o
